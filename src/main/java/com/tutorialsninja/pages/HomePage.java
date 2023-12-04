@@ -23,26 +23,26 @@ public class HomePage extends Utility {
     }
 
 
-    By selectCurrency = By.xpath("//span[contains(text(),'Currency')]");//2.15
-    By poundSterling = By.xpath("//button[normalize-space()='£Pound Sterling']");//2.15
-    By desktopLink = By.linkText("Desktops");//1.1
-    By laptopNotebooks = By.linkText("Laptops & Notebooks");//2.1
-    By components = By.linkText("Components");//3.1
-    By accountOption = By.xpath("//div[@id='top-links']//li[contains(@class,'open')]/ul/li");//1.2
-    By muAccountLink = By.xpath("//span[contains(text(),'My Account')]");//1.1
+    By selectCurrency = By.xpath("//span[contains(text(),'Currency')]");
+    By poundSterling = By.xpath("//button[normalize-space()='£Pound Sterling']");
+    By desktopLink = By.linkText("Desktops");
+    By laptopNotebooks = By.linkText("Laptops & Notebooks");
+    By components = By.linkText("Components");
+    By accountOption = By.xpath("//div[@id='top-links']//li[contains(@class,'open')]/ul/li");
+    By muAccountLink = By.xpath("//span[contains(text(),'My Account')]");
 
 
-    public void mouseHoverOnDesktops() {mouseHoverToElementAndClick(desktopLink);  }//1.1
+    public void mouseHoverOnDesktops() {mouseHoverToElementAndClick(desktopLink);  }
 
-    public void mouseHoverOnLaptopNotebooks() {mouseHoverToElementAndClick(laptopNotebooks);  }//2.1
+    public void mouseHoverOnLaptopNotebooks() {mouseHoverToElementAndClick(laptopNotebooks);  }
 
-    public void mouseHoverOnComponents() {mouseHoverToElementAndClick(components); }//3.1
+    public void mouseHoverOnComponents() {mouseHoverToElementAndClick(components); }
 
-    public void clickOnCurrency() {clickOnElement(selectCurrency);}//2.15
+    public void clickOnCurrency() {clickOnElement(selectCurrency);}
 
-    public void selectPoundSterling() {mouseHoverToElementAndClick(poundSterling); }//2.15
+    public void selectPoundSterling() {mouseHoverToElementAndClick(poundSterling); }
 
-    public void clickOnMyAccount() {clickOnElement(muAccountLink);}//1.1
+    public void clickOnMyAccount() {clickOnElement(muAccountLink);}
 
   // 1.1 create method with name "selectMyAccountOptions" it has one parameter name"option" of type string
    //1.2 This method should click on the options whatever name is passed as parameter.

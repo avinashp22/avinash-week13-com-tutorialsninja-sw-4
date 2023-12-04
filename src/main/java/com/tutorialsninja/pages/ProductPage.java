@@ -8,27 +8,27 @@ import java.util.List;
 
 public class ProductPage  extends Utility {
 
-    By productText = By.xpath("//h1[contains(text(),'HP LP3065')]");//2.5
-    By addToCart = By.xpath("//button[@id='button-cart']");//2.8
-    By successMessage = By.cssSelector("body:nth-child(2) div.container:nth-child(4) > div.alert.alert-success.alert-dismissible");//2.9
-    By shoppingCart = By.xpath("//a[contains(text(),'shopping cart')]");//2.10
+    By productText = By.xpath("//h1[contains(text(),'HP LP3065')]");
+    By addToCart = By.xpath("//button[@id='button-cart']");
+    By successMessage = By.cssSelector("body:nth-child(2) div.container:nth-child(4) > div.alert.alert-success.alert-dismissible");
+    By shoppingCart = By.xpath("//a[contains(text(),'shopping cart')]");
 
 
     public String verifyProductText() {
         return getTextFromElement(productText);
-    }//2.5
+    }
 
     public void clickOnAddToCart() {
         clickOnElement(addToCart);
-    }//2.8
+    }
 
     public String verifyTheSuccessMessage() {
         return getTextFromElement(successMessage);
-    }//2.9
+    }
 
     public void clickOnShoppingCart() {
         clickOnElement(shoppingCart);
-    }//2.10
+    }
 
     public void datePicker() {
         String year = "2023";

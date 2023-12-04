@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 
 public class ComponentsPage extends Utility {
 
-    By componentsText = By.xpath("//h2[contains(text(),'Components')]");//3.3
+    By componentsText = By.xpath("//h2[contains(text(),'Components')]");
 
     public String verifyComponentsText() {
         return getTextFromElement(componentsText);
-    } //3.3
+    }
 
 }
