@@ -5,24 +5,16 @@ import org.openqa.selenium.By;
 
 public class LoginPage extends Utility {
 
-    By welcomeText = By.xpath("//h1[contains(text(),'Welcome, Please Sign In!')]");
-    By emailField = By.id("Email");
-    By passwordField = By.name("Password");
-    By loginButton = By.xpath("//button[contains(text(),'Log in')]");
-    By errorMessage = By.xpath("//div[@class='message-error validation-summary-errors']");
-    By welcomeMessage = By.xpath("//h2[normalize-space()='Welcome to our store']");
+    By loginLink = By.xpath("//h2[contains(text(),'Returning Customer')]");//2.3
+    By emailField = By.id("input-email");//4.3
+    By passwordField = By.id("input-password");//4.5
+    By loginButton = By.xpath("//form[contains(@action,'login')]//input[@type='submit']");//4.6
 
-    public String getWelcomeText(){return getTextFromElement(welcomeText);}
+    public String verifyTheLoginText() {return getTextFromElement(loginLink); }//2.3
 
-    public void enterEmailId(String email){
-        sendTextToElement(emailField, email);}
+    public void enterEmail1(String email1) {sendTextToElement(emailField, email1);}//4.3
 
-    public void enterPassword(String password){
-        sendTextToElement(passwordField, password);}
+    public void enterPassword1(String password1) {sendTextToElement(passwordField, password1);}//4.4
 
-    public void clickOnLoginButton(){clickOnElement(loginButton);}
-
-    public String getErrorMessage(){return getTextFromElement(errorMessage);}
-
-    public String getWelcomeMessage(){return getTextFromElement(welcomeMessage);}
+    public void clickOnLoginButton() {clickOnElement(loginButton);}//4.6
 }

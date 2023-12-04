@@ -40,6 +40,11 @@ public class Utility extends ManageBrowser {
         driver.findElement(by).sendKeys(text);
     }
 
+    /**
+     * This method will return list of WebElements
+     */
+    public List<WebElement> getListOfElements(By by) {return driver.findElements(by); }
+
 //************************* Alert Methods *****************************************************
 
     /**
