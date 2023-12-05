@@ -16,7 +16,7 @@ public class LaptopsAndNotebooksTest  extends BaseTest {
     HomePage homePage = new HomePage();
     LaptopsAndNotebooksPage laptopsAndNotebooks = new LaptopsAndNotebooksPage();
     DesktopsPage desktopsPage = new DesktopsPage();
-    MacBookPage mcBook = new MacBookPage();
+    MacBookPage macBook = new MacBookPage();
     ShoppingCartPage shoppingCart = new ShoppingCartPage();
     CheckOutPage checkOut = new CheckOutPage();
 
@@ -79,19 +79,19 @@ public class LaptopsAndNotebooksTest  extends BaseTest {
         laptopsAndNotebooks.selectProductMacBook();
 
         //2.5 Verify the text “MacBook”
-        String actualMacBookText = mcBook.verifyMacBookText();
+        String actualMacBookText = macBook.verifyMacBookText();
         Assert.assertEquals(actualMacBookText, "MacBook", "Incorrect Product");
 
         //2.6 Click on ‘Add To Cart’ button
-        mcBook.clickOnAddToCart();
+        macBook.clickOnAddToCart();
 
         //2.7 Verify the message “Success: You have added MacBook to your shopping cart!”
-        String actualAddToCartText = mcBook.addCartMessage();
+        String actualAddToCartText = macBook.addCartMessage();
         Assert.assertEquals(actualAddToCartText, "Success: You have added MacBook to your shopping cart!\n" +
                 "×", "Incorrect Text");
 
         //2.8 Click on link “shopping cart” display into success message
-        mcBook.clickOnShoppingCart();
+        macBook.clickOnShoppingCart();
 
         //2.9 Verify the text "Shopping Cart"
         String actualShoppingCartText = shoppingCart.verifyShoppingCartText();
@@ -108,8 +108,8 @@ public class LaptopsAndNotebooksTest  extends BaseTest {
         shoppingCart.updateTheQty();
 
         //2.13 Verify the message “Success: You have modified your shopping cart!”
-        String actualModidyCartText = shoppingCart.verifyTheModifyCartText();
-        Assert.assertEquals(actualModidyCartText, "Success: You have modified your shopping cart!\n" +
+        String actualModifyCartText = shoppingCart.verifyTheModifyCartText();
+        Assert.assertEquals(actualModifyCartText, "Success: You have modified your shopping cart!\n" +
                 "×", "Incorrect Text");
 
         //2.14 Verify the Total £737.45

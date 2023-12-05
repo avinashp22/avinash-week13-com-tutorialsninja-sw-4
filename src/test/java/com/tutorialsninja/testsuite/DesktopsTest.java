@@ -77,7 +77,7 @@ public class DesktopsTest  extends BaseTest {
 
         //2.7 Verify the Text "HP LP3065"
         String actualText = product.verifyProductText();
-        Assert.assertEquals(actualText, "HP LP3065", "text not match");
+        Assert.assertEquals(actualText, "HP LP3065", "Incorrect Text");
 
         //2.8 Select Delivery Date "2023-11-27"
         product.datePicker();
@@ -89,33 +89,33 @@ public class DesktopsTest  extends BaseTest {
         Thread.sleep(2000);
         String actualMessage = product.verifyTheSuccessMessage();
         Assert.assertEquals(actualMessage, "Success: You have added HP LP3065 to your shopping cart!\n" +
-                "×", "message not match");
+                "×", "Incorrect Text");
 
         // 2.12 Click on link “shopping cart” display into success message
         product.clickOnShoppingCart();
 
         //2.13 Verify the text "Shopping Cart"
         String actualShoppingCartText = shoppingCart.verifyShoppingCartText();
-        Assert.assertEquals(actualShoppingCartText, "Shopping Cart  (1.00kg)", "Text is not match");
+        Assert.assertEquals(actualShoppingCartText, "Shopping Cart  (1.00kg)", "Incorrect Text");
 
         //2.14 Verify the Product name "HP LP3065"
         String actualProductName = shoppingCart.verifyProductName();
-        Assert.assertEquals(actualProductName, "HP LP3065", "Product name is not match");
+        Assert.assertEquals(actualProductName, "HP LP3065", "Incorrect Text");
 
         //2.15 Verify the Delivery Date "2023-11-27"
         Thread.sleep(2000);
         String actualDeliveryDate = shoppingCart.verifyTheDeliveryDate();
-        Assert.assertEquals(actualDeliveryDate, "Delivery Date:2023-11-27", "Delivery date is not match");
+        Assert.assertEquals(actualDeliveryDate, "Delivery Date:2023-11-27", "Incorrect Text");
 
         //2.16 Verify the Model "Product21"
         Thread.sleep(2000);
         String actualModelName = shoppingCart.verifyTheModelName();
-        Assert.assertEquals(actualModelName, "Product 21", "Model name is not match");
+        Assert.assertEquals(actualModelName, "Product 21", "Incorrect Text");
 
         //2.17 Verify the Total "£74.73"
         Thread.sleep(2000);
         String actualTotalAmount = shoppingCart.verifyTheTotalAmount();
-        Assert.assertEquals(actualTotalAmount, "£74.73", "Total amount is not match");
+        Assert.assertEquals(actualTotalAmount, "£74.73", "Incorrect Price");
     }
 
 

@@ -29,7 +29,7 @@ public class HomePage extends Utility {
     By laptopNotebooks = By.linkText("Laptops & Notebooks");
     By components = By.linkText("Components");
     By accountOption = By.xpath("//div[@id='top-links']//li[contains(@class,'open')]/ul/li");
-    By muAccountLink = By.xpath("//span[contains(text(),'My Account')]");
+    By myAccountLink = By.xpath("//span[contains(text(),'My Account')]");
 
 
     public void mouseHoverOnDesktops() {mouseHoverToElementAndClick(desktopLink);  }
@@ -42,7 +42,7 @@ public class HomePage extends Utility {
 
     public void selectPoundSterling() {mouseHoverToElementAndClick(poundSterling); }
 
-    public void clickOnMyAccount() {clickOnElement(muAccountLink);}
+    public void clickOnMyAccount() {clickOnElement(myAccountLink);}
 
   // 1.1 create method with name "selectMyAccountOptions" it has one parameter name"option" of type string
    //1.2 This method should click on the options whatever name is passed as parameter.
