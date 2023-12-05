@@ -56,7 +56,7 @@ public class MyAccountsTest   extends BaseTest  {
         registerPage.enterLastName("Patel");
 
         //3.5 Enter Email
-        registerPage.enterEmail("avvvinnaassshhhp222001@gmail.com");
+        registerPage.enterEmail("avvvinnaassshhhp22200111@gmail.com");
 
         //3.6 Enter Telephone
         registerPage.enterTelephone("07759463259");
